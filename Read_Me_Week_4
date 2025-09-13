@@ -1,0 +1,5 @@
+Both codes are similar with the option of inputting 3 numbers. 
+
+However the first code gives 3 options, picking 1 of those options will print the option chosen.
+
+The second code allows input of 3 numbers and out of the 3 numbers, it will print the largest number inputted. 
