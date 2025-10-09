@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+
+int binarySearch(int array[], int low, int high, int number_to_search_for) {
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (number_to_search_for == array[mid]) {
+            return mid;
+        }
+        if (number_to_search_for > array[mid]) {
+            low = mid + 1;
+        }
+        if (number_to_search_for < array[mid]) {
+            high = mid - 1;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    
+    struct Item {
+        std::string name;
+        int id;
+    };
+    Item* inventory = new Item[100]; 
+
+    int size;
+    std::cout << "Enter array: ";
+    std::cin >> size;
+
+    int* dynamicArray = new int[size]; 
+    std::cout << "Enter " << size << " sorted integers:\n";
+    for (int i = 0; i < size; ++i) {
+        std::cin >> dynamicArray[i];
+    }
+
+   
+    int arrayOfNums[] = {2, 4, 7, 9, 10, 13, 20};
+    int n = sizeof(arrayOfNums) / sizeof(arrayOfNums[0]);
+    int search_target = 13;
+    int result = binarySearch(arrayOfNums, 0, n - 1, search_target);
+
+    if (result == -1) { 
+        printf("Element %d doesn't exist in the array\n", search_target);
+    } else {
+        printf("The index of element %d is %d\n", search_target, result);
+    }
+
+    
+    delete[] dynamicArray;
+    dynamicArray = nullptr; 
+
+    delete[] inventory;
+    inventory = nullptr;
+    
+    return 0;
+}
