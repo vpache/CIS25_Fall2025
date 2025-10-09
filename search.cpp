@@ -23,7 +23,7 @@ int main() {
     for (int i = 0; i < numRecords; ++i) {
         if (items[i].id == searchId) {
             foundItem = &items[i];
-            break; // Exit the loop once the item is found
+            break;
         }
     }
 
@@ -38,4 +38,5 @@ int main() {
 
     return 0;
 }
+
 
