@@ -1,0 +1,5 @@
+=== Transaction History ===
+Deposit: $100.00
+Purchase - coffee: $-5.00
+Purchase - boots: $-50.00
+Purchase - bart: $-2.00
