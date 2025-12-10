@@ -14,8 +14,7 @@ struct Show {
 
 int main() {
 
-    ifstream file("topshow.csv");   // automatically use your CSV file
-    if (!file.is_open()) {
+    ifstream file("topshow.csv"); 
         cout << "couldnt open the csv file :(\n";
         return 0;
     }
@@ -23,8 +22,7 @@ int main() {
     vector<Show> shows;
     string line;
 
-    getline(file, line); // skip header
-
+    getline(file, line);
     int limit = 0;
 
     while (getline(file, line)) {
@@ -48,7 +46,7 @@ int main() {
         shows.push_back(s);
 
         limit++;
-        if (limit == 10) {  // just load first 10
+        if (limit == 10) { 
             break;
         }
     }
@@ -66,3 +64,4 @@ int main() {
 
     return 0;
 }
+
